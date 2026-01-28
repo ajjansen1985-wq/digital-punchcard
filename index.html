@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Coffee Punch Card</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="card">
+      <h1 class="card__title">20oz Punch Card</h1>
+      <p class="card__subtitle">The Brown Mug Coffee and Espresso</p>
+
+      <!-- Status / progress -->
+      <p id="status" class="card__status">0 / 20 punches</p>
+
+      <!-- Cups grid -->
+      <div id="cups" class="card__grid">
+        <!-- 20 cups – you can change the number later -->
+        <!-- Using data-index so JS knows which cup is clicked -->
+        <!-- You can duplicate these lines until you have 20 -->
+        <button class="cup" data-index="0" aria-pressed="false">
+          <span class="cup__icon">☕</span>
+        </button>
+        <button class="cup" data-index="1" aria-pressed="false">
+          <span class="cup__icon">☕</span>
+        </button>
+        <button class="cup" data-index="2" aria-pressed="false">
+          <span class="cup__icon">☕</span>
+        </button>
+        <button class="cup" data-index="3" aria-pressed="false">
+          <span class="cup__icon">☕</span>
+        </button>
+        <button class="cup" data-index="4" aria-pressed="false">
+          <span class="cup__icon">☕</span>
+        </button>
+
+        <button class="cup" data-index="5" aria-pressed="false">
+          <span class="cup__icon">☕</span>
+        </button>
+        <button class="cup" data-index="6" aria-pressed="false">
+          <span class="cup__icon">☕</span>
+        </button>
+        <button class="cup" data-index="7" aria-pressed="false">
+          <span class="cup__icon">☕</span>
+        </button>
+        <button class="cup" data-index="8" aria-pressed="false">
+          <span class="cup__icon">☕</span>
+        </button>
+        <button class="cup" data-index="9" aria-pressed="false">
+          <span class="cup__icon">☕</span>
+        </button>
+
+        <button class="cup" data-index="10" aria-pressed="false">
+          <span class="cup__icon">☕</span>
+        </button>
+        <button class="cup" data-index="11" aria-pressed="false">
+          <span class="cup__icon">☕</span>
+        </button>
+        <button class="cup" data-index="12" aria-pressed="false">
+          <span class="cup__icon">☕</span>
+        </button>
+        <button class="cup" data-index="13" aria-pressed="false">
+          <span class="cup__icon">☕</span>
+        </button>
+        <button class="cup" data-index="14" aria-pressed="false">
+          <span class="cup__icon">☕</span>
+        </button>
+
+        <button class="cup" data-index="15" aria-pressed="false">
+          <span class="cup__icon">☕</span>
+        </button>
+        <button class="cup" data-index="16" aria-pressed="false">
+          <span class="cup__icon">☕</span>
+        </button>
+        <button class="cup" data-index="17" aria-pressed="false">
+          <span class="cup__icon">☕</span>
+        </button>
+        <button class="cup" data-index="18" aria-pressed="false">
+          <span class="cup__icon">☕</span>
+        </button>
+        <button class="cup" data-index="19" aria-pressed="false">
+          <span class="cup__icon">☕</span>
+        </button>
+      </div>
+
+      <!-- Reward message -->
+      <p id="rewardMessage" class="card__reward" aria-live="polite"></p>
+
+      <!-- Reset button -->
+      <button id="resetButton" class="card__reset">
+        Reset card
+      </button>
+    </section>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
