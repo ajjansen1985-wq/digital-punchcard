@@ -1,0 +1,123 @@
+/* General page layout */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f3f0e9;
+  color: #222;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+/* Card */
+.card {
+  background: #fffdf7;
+  border: 2px solid #333;
+  border-radius: 8px;
+  padding: 1.5rem;
+  max-width: 420px;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.card__title {
+  margin: 0;
+  text-align: center;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.card__subtitle {
+  margin: 0.25rem 0 0.75rem;
+  text-align: center;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.card__status {
+  text-align: center;
+  margin: 0.5rem 0 1rem;
+  font-weight: 600;
+}
+
+/* Cups grid */
+.card__grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.cup {
+  background: #f7f3e7;
+  border: 1px solid #b9aa7f;
+  border-radius: 4px;
+  padding: 0.4rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s ease, transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.cup__icon {
+  font-size: 1.4rem;
+}
+
+/* Hover/focus styles */
+.cup:hover,
+.cup:focus-visible {
+  outline: none;
+  background: #eee0bf;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
+}
+
+/* Stamped state */
+.cup.stamped {
+  background: #3c6e71;
+  color: #ffffff;
+  border-color: #234044;
+}
+
+.cup.stamped .cup__icon {
+  /* You can swap icon if you want; for now just color change */
+}
+
+/* Reward message and reset button */
+.card__reward {
+  min-height: 1.2em;
+  text-align: center;
+  font-weight: 600;
+  color: #3c6e71;
+  margin: 0 0 0.75rem;
+}
+
+.card__reset {
+  display: block;
+  margin: 0 auto;
+  padding: 0.4rem 0.9rem;
+  border-radius: 4px;
+  border: 1px solid #333;
+  background: #fff;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.15s ease;
+}
+
+.card__reset:hover,
+.card__reset:focus-visible {
+  background: #f1e7d3;
+}
